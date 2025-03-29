@@ -1,7 +1,7 @@
 FROM tensorflow/serving:latest
 
 COPY ./output/serving_model /models/student-depression-prediction-model
-COPY ./config /model_config
+COPY ./monitoring /model_config
 
 ENV MODEL_NAME=student-depression-prediction-model
 ENV MONITORING_CONFIG="/model_config/prometheus.config"
